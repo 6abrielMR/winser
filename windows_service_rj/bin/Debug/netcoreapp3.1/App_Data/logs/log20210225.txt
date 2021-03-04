@@ -1,0 +1,108 @@
+2021-02-25 13:03:06 [INFO]<1> [] ====================================================================
+2021-02-25 13:03:06 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2021-02-25 13:03:06 [INFO]<1> [] Application Directory: /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/bin/Debug/netcoreapp3.1/
+2021-02-25 13:03:06 [FATL]<1> [] Application terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Microsoft.Extensions.Hosting.IHostedService Lifetime: Singleton ImplementationType: wsredjurista.Worker': Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Microsoft.Extensions.Hosting.IHostedService Lifetime: Singleton ImplementationType: wsredjurista.Worker': Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at wsredjurista.Program.Main(String[] args) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Program.cs:line 40
+2021-02-25 13:03:06 [INFO]<1> [] ====================================================================
+
+2021-02-25 13:11:33 [INFO]<1> [] ====================================================================
+2021-02-25 13:11:34 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2021-02-25 13:11:34 [INFO]<1> [] Application Directory: /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/bin/Debug/netcoreapp3.1/
+2021-02-25 13:11:34 [FATL]<1> [] Application terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Microsoft.Extensions.Hosting.IHostedService Lifetime: Singleton ImplementationType: wsredjurista.Worker': Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Microsoft.Extensions.Hosting.IHostedService Lifetime: Singleton ImplementationType: wsredjurista.Worker': Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at wsredjurista.Program.Main(String[] args) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Program.cs:line 40
+2021-02-25 13:11:34 [INFO]<1> [] ====================================================================
+
+2021-02-25 13:14:02 [INFO]<1> [] ====================================================================
+2021-02-25 13:14:03 [INFO]<1> [] Application Starts. Version: 1.0.0.0
+2021-02-25 13:14:03 [INFO]<1> [] Application Directory: /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/bin/Debug/netcoreapp3.1/
+2021-02-25 13:14:03 [INFO]<1> [] ====================================================================
+
+2021-02-25 13:15:59 [INFO]<1> [] ====================================================================
+
+2021-02-25 13:16:30 [FATL]<1> [] Application terminated unexpectedly
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at wsredjurista.services.FileProcessor.Start(CancellationToken cancellationToken) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Services/FileProcessor.cs:line 41
+   at wsredjurista.Worker.StartAsync(CancellationToken cancellationToken) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Worker.cs:line 33
+   at wsredjurista.Program.Main(String[] args) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Program.cs:line 43
+2021-02-25 13:16:30 [INFO]<1> [] ====================================================================
+
+2021-02-25 13:17:28 [FATL]<1> [] Application terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Microsoft.Extensions.Hosting.IHostedService Lifetime: Singleton ImplementationType: wsredjurista.Worker': Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Microsoft.Extensions.Hosting.IHostedService Lifetime: Singleton ImplementationType: wsredjurista.Worker': Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'wsredjurista.services.IFileProcessor' while attempting to activate 'wsredjurista.Worker'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at wsredjurista.Program.Main(String[] args) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Program.cs:line 41
+2021-02-25 13:17:28 [INFO]<1> [] ====================================================================
+
+2021-02-25 13:18:11 [FATL]<1> [] Application terminated unexpectedly
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at wsredjurista.services.FileProcessor.Start(CancellationToken cancellationToken) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Services/FileProcessor.cs:line 41
+   at wsredjurista.Worker.StartAsync(CancellationToken cancellationToken) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Worker.cs:line 33
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at wsredjurista.Program.Main(String[] args) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Program.cs:line 41
+2021-02-25 13:18:12 [INFO]<1> [] ====================================================================
+
+2021-02-25 13:19:29 [FATL]<1> [] Application terminated unexpectedly
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at wsredjurista.services.FileProcessor.Start() in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Services/FileProcessor.cs:line 41
+   at wsredjurista.Worker.StartAsync(CancellationToken cancellationToken) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Worker.cs:line 33
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at wsredjurista.Program.Main(String[] args) in /home/gabriel/Documentos/workporjects/audisoft/projects/redjurista_windows_service/wsredjurista/wsredjurista/Program.cs:line 41
+2021-02-25 13:19:29 [INFO]<1> [] ====================================================================
+
