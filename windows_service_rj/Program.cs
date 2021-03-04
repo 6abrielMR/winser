@@ -16,9 +16,8 @@ namespace wsredjurista
         public static void Main(string[] args)
         {
             const string loggerTemplate = @"{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level:u4}]<{ThreadId}> [{SourceContext:l}] {Message:lj}{NewLine}{Exception}";
-            //string baseDir = AppDomain.CurrentDomain.BaseDirectory;
-            const string baseDir = "./";
-            var logfile = Path.Combine(baseDir, "Logs", "log.txt");
+            const string baseDir = "/home/gabriel/Documentos/tmp/call/logs";
+            var logfile = Path.Combine(baseDir, "log.txt");
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Warning)
                 .Enrich.With(new ThreadIdEnricher())

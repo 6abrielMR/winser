@@ -35,6 +35,7 @@ namespace wsredjurista.services
             if (e.ChangeType != WatcherChangeTypes.Renamed) return;
             textFile.Read(filesToDelete);
             blobStorage.UploadAsync(File.OpenRead(e.FullPath), e.Name);
+            textFile.Move(e.FullPath, Path.Combine(configuration.GetSection("Path:FilesProcessed").Value, e.Name));
             blobStorage.DeleteAsync(textFile.Lines);
         }
 

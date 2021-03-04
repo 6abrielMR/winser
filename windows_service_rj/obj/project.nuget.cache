@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LJaxpPobdkD3u0+gCZtDR2keVot2q/3xlHfm6n0KUmgNro76NJYWSDCVRL7mkZHZnBGlXHVE9XtdLsLJeUV8XA==",
+  "dgSpecHash": "jQ/yEzRxlz2Iq4rTd/M+1aduiuZ/USPTE95j9MYgiIKBfKyLQ6923tywzydFckJe5QWf0sXZWq/zaPg2p3zfbQ==",
   "success": true,
-  "projectFilePath": "/home/gabriel/Documentos/workporjects/audisoft/repos/redjurista/windows_service_rj/wsredjurista.csproj",
+  "projectFilePath": "/home/gabriel/Documentos/tmp/winservic/windows_service_rj/wsredjurista.csproj",
   "expectedPackageFiles": [
     "/home/gabriel/.nuget/packages/azure.core/1.8.1/azure.core.1.8.1.nupkg.sha512",
     "/home/gabriel/.nuget/packages/azure.storage.blobs/12.8.0/azure.storage.blobs.12.8.0.nupkg.sha512",

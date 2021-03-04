@@ -8,5 +8,6 @@ namespace wsredjurista.services
             set;
         }
          void Read(string path);
+         void Move(string sourceFile, string destinationFile);
     }
 }

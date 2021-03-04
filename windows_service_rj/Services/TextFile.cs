@@ -20,5 +20,11 @@ namespace wsredjurista.services
             Lines = File.ReadAllText(path).Split(Environment.NewLine);
             logger.LogInformation($"File read, contains {Lines.Length} lines");
         }
+
+        public void Move(string sourceFile, string destinationFile)
+        {
+            logger.LogInformation("Moving file to processed");
+            File.Move(sourceFile, destinationFile);
+        }
     }
 }
