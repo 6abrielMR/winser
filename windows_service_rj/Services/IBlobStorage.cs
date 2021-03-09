@@ -6,7 +6,7 @@ namespace wsredjurista.services
     {
          void Start();
          void Stop();
-         void UploadAsync(FileStream uploadFileStream, string filename);
+         void UploadAsync();
          void DeleteAsync(string[] filesToDelete);
     }
 }

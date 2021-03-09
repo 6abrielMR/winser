@@ -1,3 +1,5 @@
+using System.IO;
+
 namespace wsredjurista.services
 {
     public interface ITextFile
@@ -7,7 +9,17 @@ namespace wsredjurista.services
             get;
             set;
         }
-         void Read(string path);
-         void Move(string sourceFile, string destinationFile);
+
+        FileInfo[] Files
+        {
+            get;
+            set;
+        }
+
+        void Read(string path);
+
+        void Move(string sourceFile, string destinationFile);
+
+        void ReadDir();
     }
 }

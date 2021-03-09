@@ -7,11 +7,14 @@ namespace wsredjurista.services
     public class TextFile : ITextFile
     {
         private readonly ILogger<TextFile> logger;
+        private readonly DirectoryInfo dir;
         public string[] Lines { get; set; }
+        public FileInfo[] Files { get; set; }
 
-        public TextFile(ILogger<TextFile> logger)
+        public TextFile(ILogger<TextFile> logger, IServiceConfig config)
         {
             this.logger = logger;
+            dir = new DirectoryInfo(config.inputFolder);
         }
 
         public void Read(string path)
@@ -25,6 +28,11 @@ namespace wsredjurista.services
         {
             logger.LogInformation("Moving file to processed");
             File.Move(sourceFile, destinationFile);
+        }
+
+        public void ReadDir()
+        {
+            Files = dir.GetFiles();
         }
     }
 }

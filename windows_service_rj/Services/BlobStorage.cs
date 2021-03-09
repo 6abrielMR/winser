@@ -2,8 +2,6 @@ using System;
 using System.IO;
 using Azure.Storage.Blobs;
 using Azure.Storage.Blobs.Models;
-using Azure.Storage.Blobs.Specialized;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace wsredjurista.services
@@ -11,23 +9,22 @@ namespace wsredjurista.services
     public class BlobStorage : IBlobStorage
     {
         private readonly ILogger<BlobStorage> logger;
-        private readonly IConfiguration configuration;
-        private readonly string ConnectionString;
-        private readonly string ContainerName;
-        private BlobContainerClient ContainerClient;
+        private readonly IServiceConfig configuration;
+        private readonly ITextFile textFile;
+        private readonly BlobContainerClient ContainerClient;
+        private FileInfo[] files;
 
-        public BlobStorage(ILogger<BlobStorage> logger, IConfiguration configuration)
+        public BlobStorage(ILogger<BlobStorage> logger, IServiceConfig configuration, ITextFile textFile)
         {
             this.logger = logger;
             this.configuration = configuration;
-            ConnectionString = configuration.GetConnectionString("DefaultConnection");
-            ContainerName = configuration.GetSection("Container:Name").Value;
+            this.textFile = textFile;
+            ContainerClient = new BlobContainerClient(configuration.defaultConnection, configuration.containerName);
         }
 
         public void Start()
         {
             logger.LogInformation("Connection Ready");
-            ContainerClient = new BlobContainerClient(ConnectionString, ContainerName);
         }
 
         public void Stop()
@@ -35,16 +32,25 @@ namespace wsredjurista.services
             throw new System.NotImplementedException();
         }
 
-        public async void UploadAsync(FileStream uploadFileStream, string filename)
+        public async void UploadAsync()
         {
-            BlobClient blobClient = ContainerClient.GetBlobClient(filename);
-            logger.LogInformation("Uploading to Blob storage as blob:\n\t {0}\n", blobClient.Uri);
-            await blobClient.UploadAsync(uploadFileStream, true);
-            uploadFileStream.Close();
+            textFile.ReadDir();
+            files = textFile.Files;
+            if (files == null) return;
+            foreach (var file in files)
+            {
+                var uploadFileStream = File.OpenRead(file.FullName);
+                BlobClient blobClient = ContainerClient.GetBlobClient(file.Name);
+                logger.LogInformation("Uploading to Blob storage as blob:\n\t {0}\n", blobClient.Uri);
+                await blobClient.UploadAsync(uploadFileStream, true);
+                uploadFileStream.Close();
+                textFile.Move(file.FullName, Path.Combine(configuration.filesProcessed, file.Name));
+            }
         }
         
         public async void DeleteAsync(string[] filesToDelete)
         {
+            textFile.Read(configuration.filesToDelete);
             foreach (var filename in filesToDelete)
             {
                 if (!String.IsNullOrEmpty(filename))

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/gabriel/Documentos/tmp/winservic/windows_service_rj/wsredjurista.csproj": {}
+    "/home/gabriel/Documentos/workporjects/audisoft/repos/redjurista/windows_service_rj/wsredjurista.csproj": {}
   },
   "projects": {
-    "/home/gabriel/Documentos/tmp/winservic/windows_service_rj/wsredjurista.csproj": {
+    "/home/gabriel/Documentos/workporjects/audisoft/repos/redjurista/windows_service_rj/wsredjurista.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/gabriel/Documentos/tmp/winservic/windows_service_rj/wsredjurista.csproj",
+        "projectUniqueName": "/home/gabriel/Documentos/workporjects/audisoft/repos/redjurista/windows_service_rj/wsredjurista.csproj",
         "projectName": "wsredjurista",
-        "projectPath": "/home/gabriel/Documentos/tmp/winservic/windows_service_rj/wsredjurista.csproj",
+        "projectPath": "/home/gabriel/Documentos/workporjects/audisoft/repos/redjurista/windows_service_rj/wsredjurista.csproj",
         "packagesPath": "/home/gabriel/.nuget/packages/",
-        "outputPath": "/home/gabriel/Documentos/tmp/winservic/windows_service_rj/obj/",
+        "outputPath": "/home/gabriel/Documentos/workporjects/audisoft/repos/redjurista/windows_service_rj/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/gabriel/.nuget/NuGet/NuGet.Config"

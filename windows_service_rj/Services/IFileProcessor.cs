@@ -1,6 +1,7 @@
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Timers;
 
 namespace wsredjurista.services
 {
@@ -8,6 +9,6 @@ namespace wsredjurista.services
     {
          Task Start();
          void Stop();
-         void Process(object source, FileSystemEventArgs e);
+         void Process(object sender, ElapsedEventArgs e);
     }
 }

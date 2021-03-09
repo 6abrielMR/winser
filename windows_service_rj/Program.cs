@@ -54,8 +54,8 @@ namespace wsredjurista
                 })
                 .ConfigureServices((hostContext, services) =>
                 {
+                    services.AddTransient<IServiceConfig, ServiceConfig>();
                     services.AddTransient<IFileProcessor, FileProcessor>();
-                    services.AddTransient<IWatcher, Watcher>();
                     services.AddTransient<IBlobStorage, BlobStorage>();
                     services.AddTransient<ITextFile, TextFile>();
                     services.AddHostedService<Worker>();
